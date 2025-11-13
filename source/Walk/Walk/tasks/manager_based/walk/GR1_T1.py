@@ -15,7 +15,7 @@ GR1_T1_CFG = ArticulationCfg(
         # Use default rigid_props and articulation_props in USD file.
     ),
     init_state=ArticulationCfg.InitialStateCfg(
-        pos = (0.0, 0.0, 0.949), # position, z-axis tested in isaac-sim
+        pos = (0.0, 0.0, 0.95), # position, z-axis tested in isaac-sim
         rot = (1.0, 0.0, 0.0 ,0.0), # quaternions, no rotation
         lin_vel = (0.0, 0.0, 0.0),
         ang_vel = (0.0, 0.0, 0.0),
@@ -24,7 +24,7 @@ GR1_T1_CFG = ArticulationCfg(
     ),
     actuators = {
     "torso": ImplicitActuatorCfg(
-        joint_names=[
+        joint_names_expr=[
             "waist_yaw",
             "waist_pitch",
             "waist_roll",
@@ -36,7 +36,7 @@ GR1_T1_CFG = ArticulationCfg(
     ),
 
     "left_leg": ImplicitActuatorCfg(
-        joint_names=[
+        joint_names_expr=[
             "l_hip_roll",
             "l_hip_yaw",
             "l_knee_pitch",
@@ -50,7 +50,7 @@ GR1_T1_CFG = ArticulationCfg(
     ),
 
     "right_leg": ImplicitActuatorCfg(
-        joint_names=[
+        joint_names_expr=[
             "r_hip_roll",
             "r_hip_yaw",
             "r_hip_pitch",
@@ -65,7 +65,7 @@ GR1_T1_CFG = ArticulationCfg(
     ),
 
     "head": ImplicitActuatorCfg(
-        joint_names=[
+        joint_names_expr=[
             "head_yaw",
             "head_roll",
             "head_pitch",
@@ -77,7 +77,7 @@ GR1_T1_CFG = ArticulationCfg(
     ),
 
     "left_arm": ImplicitActuatorCfg(
-        joint_names=[
+        joint_names_expr=[
             "l_shoulder_roll",
             "l_shoulder_yaw",
             "l_elbow_pitch",
@@ -92,7 +92,7 @@ GR1_T1_CFG = ArticulationCfg(
     ),
 
     "right_arm": ImplicitActuatorCfg(
-        joint_names=[
+        joint_names_expr=[
             "r_shoulder_pitch",
             "r_shoulder_roll",
             "r_shoulder_yaw",
